@@ -6,13 +6,22 @@
 
 using namespace utec::compilers;
 
-class ParamTest : public testing::TestWithParam<std::pair<std::string, std::vector<std::string>>> {
+/*class ParamTest : public testing::TestWithParam<std::pair<std::string, std::vector<std::string>>> {
+};*/
+class ParamTest : public testing::TestWithParam<std::pair<std::string,std::vector<std::string>>> {
 };
 
 // Grammar:
 // S -> AB
 // A -> aA | a
 // B -> bB | b
+
+/*TEST_P(ParamTest, basicTest) {
+  std::istrstream str(GetParam().first.c_str());
+
+  Parser parser(str, std::cout);
+  EXPECT_EQ(parser.parse(), GetParam().second);
+}*/
 
 TEST_P(ParamTest, basicTest) {
   std::istrstream str(GetParam().first.c_str());
@@ -22,6 +31,18 @@ TEST_P(ParamTest, basicTest) {
 }
 
 INSTANTIATE_TEST_SUITE_P(SimpleTest,
+                         ParamTest,
+                         testing::Values(
+                          std::make_pair("34 - 3 * 42", std::vector<std::string>{"-92"}) ,
+                          std::make_pair("(34 - 3) * 42", std::vector<std::string>{"1302"}) //,
+                          //std::make_pair("34 + 3 - 42", std::vector<std::string>{"-11"}) ERROR 
+                          //std::make_pair("43 + 1 \n @ 2", std::vector<std::string>{}),
+                          //std::make_pair("(34 - 3) * 42",
+                          //std::vector<std::string>())
+                         ));
+
+
+/* INSTANTIATE_TEST_SUITE_P(SimpleTest,
                          ParamTest,
                          testing::Values(
                           std::make_pair("aaaaaab", std::vector<std::string>()),
@@ -35,7 +56,10 @@ INSTANTIATE_TEST_SUITE_P(SimpleTest,
                           std::make_pair("d", std::vector<std::string>{"caracter d unexpected", "caracter d unexpected", "caracter d unexpected"}),
                           std::make_pair("ac", std::vector<std::string>{"caracter c unexpected", "caracter c unexpected"}),
                           std::make_pair("aba", std::vector<std::string>{"caracter a unexpected"})
+                        
                          ));
+*/
+
 
 int main(int argc, char** argv) {
   ::testing::InitGoogleTest(&argc, argv);
