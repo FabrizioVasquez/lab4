@@ -1,3 +1,14 @@
 #pragma once
-
-enum Categoria { A = 255, B, ERROR, END };
+enum Categoria { A,
+ID = 255,
+B,
+NUMBER,
+FACTOR,
+ERROR,
+OP_SUMA,
+OP_RESTA,
+OP_MULTIPLICACION,
+P_ABIERTO,
+P_CERRADO,
+ENDL,
+END };

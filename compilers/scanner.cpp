@@ -1,6 +1,6 @@
-#line 2 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.cpp"
+#line 2 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.cpp"
 
-#line 4 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.cpp"
+#line 4 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.cpp"
 
 #define  YY_INT_ALIGNED short int
 
@@ -314,8 +314,8 @@ int yyFlexLexer::yywrap() { return 1; }
 	(yy_hold_char) = *yy_cp; \
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
-#define YY_NUM_RULES 6
-#define YY_END_OF_BUFFER 7
+#define YY_NUM_RULES 14
+#define YY_END_OF_BUFFER 15
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -323,34 +323,36 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static const flex_int16_t yy_accept[10] =
+static const flex_int16_t yy_accept[22] =
     {   0,
-        0,    0,    7,    5,    4,    3,    1,    2,    0
+        0,    0,   15,   13,   12,    9,    2,    5,    6,    4,
+        2,    3,    1,   10,    7,    8,   11,    1,    1,   11,
+        0
     } ;
 
 static const YY_CHAR yy_ec[256] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
+        1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    4,    1,    1,    1,    1,    1,    5,
+        6,    7,    8,    1,    9,    1,    1,   10,   11,   11,
+       11,   11,   11,   11,   11,   11,   11,    1,    1,    1,
+        1,    1,    1,   12,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    4,    5,    1,    1,
+        1,    1,    1,    1,    1,    1,   13,   14,   15,   15,
 
+       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
+       15,   15,   15,   15,   15,   15,   15,   15,   15,   15,
+       15,   15,    1,   12,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,   12,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,   12,    1,    1,    1,    1,    1,
 
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -360,31 +362,42 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[6] =
+static const YY_CHAR yy_meta[16] =
     {   0,
-        1,    1,    1,    1,    1
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    2,    2,    2
     } ;
 
-static const flex_int16_t yy_base[10] =
+static const flex_int16_t yy_base[23] =
     {   0,
-        0,    0,    6,    7,    7,    7,    7,    7,    7
+        0,    0,   25,   26,   26,   26,   26,   26,   26,   26,
+       13,   12,    6,   26,    0,    0,    0,    8,   10,    0,
+       26,   20
     } ;
 
-static const flex_int16_t yy_def[10] =
+static const flex_int16_t yy_def[23] =
     {   0,
-        9,    1,    9,    9,    9,    9,    9,    9,    0
+       21,    1,   21,   21,   21,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   22,   22,   22,   21,   21,   22,
+        0,   21
     } ;
 
-static const flex_int16_t yy_nxt[13] =
+static const flex_int16_t yy_nxt[42] =
     {   0,
-        4,    5,    6,    7,    8,    9,    3,    9,    9,    9,
-        9,    9
+        4,    5,    6,    7,    8,    9,   10,   11,   12,    4,
+       13,   14,   15,   16,   17,   19,   19,   19,   19,   19,
+       19,   20,   18,   18,   21,    3,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
+       21
     } ;
 
-static const flex_int16_t yy_chk[13] =
+static const flex_int16_t yy_chk[42] =
     {   0,
-        1,    1,    1,    1,    1,    3,    9,    9,    9,    9,
-        9,    9
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,   13,   13,   18,   18,   19,
+       19,   22,   12,   11,    3,   21,   21,   21,   21,   21,
+       21,   21,   21,   21,   21,   21,   21,   21,   21,   21,
+       21
     } ;
 
 /* The intent behind this definition is that it'll catch
@@ -394,11 +407,23 @@ static const flex_int16_t yy_chk[13] =
 #define yymore() yymore_used_but_not_detected
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
-#line 1 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
-#line 2 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
+#line 1 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+#line 2 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
 #include "Enums.h"
-#line 401 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.cpp"
-#line 402 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.cpp"
+int yylinenod = 1;
+const char *ss;
+void yyerror(const char *str)
+{
+    fprintf(stdout,"The token %s, is not specified for the program.\nYou can find it on the line %d\n",str,yylinenod);
+}
+
+void yyerrorM(const char *str)
+{
+    fprintf(stdout,"The token %s, you should remove it .\nYou can find it on the line %d\n",str,yylinenod);
+}
+
+#line 426 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.cpp"
+#line 427 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.cpp"
 
 #define INITIAL 0
 
@@ -530,9 +555,9 @@ YY_DECL
 		}
 
 	{
-#line 7 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
+#line 28 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
 
-#line 536 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.cpp"
+#line 561 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.cpp"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -559,13 +584,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 10 )
+				if ( yy_current_state >= 22 )
 					yy_c = yy_meta[yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 7 );
+		while ( yy_base[yy_current_state] != 26 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -591,36 +616,76 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 8 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
-return Categoria::A;
+#line 29 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::NUMBER;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 9 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
-return Categoria::B;
+#line 30 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::OP_SUMA;
 	YY_BREAK
 case 3:
-/* rule 3 can match eol */
 YY_RULE_SETUP
-#line 11 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
-return Categoria::END;
+#line 31 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::OP_RESTA;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 12 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
-
+#line 32 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::OP_MULTIPLICACION;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 13 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
-return Categoria::ERROR;
+#line 33 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::P_ABIERTO;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 15 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
+#line 34 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::P_CERRADO;
+	YY_BREAK
+case 7:
+YY_RULE_SETUP
+#line 35 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::A;
+	YY_BREAK
+case 8:
+YY_RULE_SETUP
+#line 36 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+return Categoria::B;
+	YY_BREAK
+case 9:
+/* rule 9 can match eol */
+YY_RULE_SETUP
+#line 37 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+{++yylinenod;}
+	YY_BREAK
+case 10:
+YY_RULE_SETUP
+#line 38 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+{ yyerror(yytext); return Categoria::ERROR;}
+	YY_BREAK
+case 11:
+YY_RULE_SETUP
+#line 39 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+{ yyerrorM(yytext); return Categoria::ERROR;}
+	YY_BREAK
+case 12:
+YY_RULE_SETUP
+#line 40 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+;
+	YY_BREAK
+case 13:
+YY_RULE_SETUP
+#line 41 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
+;
+	YY_BREAK
+case 14:
+YY_RULE_SETUP
+#line 42 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
 ECHO;
 	YY_BREAK
-#line 624 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.cpp"
+#line 689 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.cpp"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1037,7 +1102,7 @@ int yyFlexLexer::yy_get_next_buffer()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 10 )
+			if ( yy_current_state >= 22 )
 				yy_c = yy_meta[yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
@@ -1065,11 +1130,11 @@ int yyFlexLexer::yy_get_next_buffer()
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 10 )
+		if ( yy_current_state >= 22 )
 			yy_c = yy_meta[yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
-	yy_is_jam = (yy_current_state == 9);
+	yy_is_jam = (yy_current_state == 21);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1583,6 +1648,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 15 "/home/romeluko/workspace/cs3402-lab3/compilers/scanner.l"
+#line 42 "/home/kali/Descargas/codingrooms-project/lab4/compilers/scanner.l"
 
 
